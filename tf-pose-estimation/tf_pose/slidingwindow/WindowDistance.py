@@ -12,7 +12,7 @@ def generateDistanceMatrix(width, height):
 	originY = height / 2
 	
 	# Generate the distance matrix
-	distances = zerosFactory((height,width), dtype=np.float)
+	distances = zerosFactory((height,width), dtype=float)
 	for index, val in np.ndenumerate(distances):
 		y,x = index
 		distances[(y,x)] = math.sqrt( math.pow(x - originX, 2) + math.pow(y - originY, 2) )

@@ -31,7 +31,7 @@ def mergeWindows(data, dimOrder, maxWindowSize, overlapPercent, batchSize, trans
 	resultDimensions = exemplarResult.shape[ len(exemplarResult.shape) - 1 ]
 	
 	# Create the matrices to hold the sums and counts for the transform result values
-	sums = np.zeros((sourceHeight, sourceWidth, resultDimensions), dtype=np.float)
+	sums = np.zeros((sourceHeight, sourceWidth, resultDimensions), dtype=float)
 	counts = np.zeros((sourceHeight, sourceWidth), dtype=np.uint32)
 	
 	# Iterate over the batches and apply the transformation function to each batch
